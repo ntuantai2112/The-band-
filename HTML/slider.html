@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .slider{
+            width: 1000px;
+        }
+        .slide_show img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body onload="start()">
+    <div class="slider">
+        <div class="slide_show">
+          <img src="img/cat.jpg" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    const arrImg = [
+            "img/cat.jpg" ,
+            "img/elephant.jpg" ,
+            "img/fox.jpg" ,
+            "img/owl.jpg" ,
+    ]
+    var slider = document.querySelector('img');
+    console.log(slider);
+    let i = 0;
+    function next(){
+        i++;
+        if( i > arrImg.length - 1){
+            i = 0;
+        }
+        slider.src = arrImg[i];
+
+       
+    }
+    function start(){
+        var temp = setInterval(() =>{
+            next();
+        },2000) 
+            
+    }
+
+</script>
+</html>

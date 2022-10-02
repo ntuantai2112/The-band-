@@ -1,0 +1,49 @@
+.media{
+    text-align: center;
+}
+
+.pc,
+.tablet,
+.mobile{
+   font-size: 68px;
+   display: none;
+}
+
+/* PC */
+@media (min-width:1024px){
+/* CSS  */
+
+.pc{
+ 
+   display: block;
+}
+}
+
+/* Tablet */
+@media (min-width:740px) and (max-width:1023px){
+/* CSS  */
+
+.tablet{
+  
+   display: block;
+}
+}
+
+/* Mobile */
+@media (max-width:740px){
+/* CSS  */
+
+.mobile{
+  
+   display: block;
+}
+}
+
+/* 
+max-with: chiều rộng tối đa, nhỏ hơn chiều dài tối đa thì chạy 
+min-with: chiều rộng tối thiểu, lớn hơn chiều dài tối thiểu thì chạy 
+Kích thước màn hình:
+PC: >= 1024px;
+Tablet: >= 740px & < 1024px;
+Mobile: < 740px;     
+*/

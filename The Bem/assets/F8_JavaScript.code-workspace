@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../F8_JavaScript"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "F8_Thiết kế Web với HTML và CSS"
+	}
+}

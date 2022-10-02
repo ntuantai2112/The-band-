@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .Tickets{
+            margin: 0 auto;
+            width: 900px;
+            height: 480px;
+            border: 1px solid gray;
+            display: none;
+        }
+        .Tickets form{
+            margin-left: 20px;
+        }
+        .Tickets .border{
+            position: relative;
+            width: 900px;
+            height: 130;
+            background-color: #009688;
+            border: 0px solid #009688;
+            margin-bottom: 20px;
+        }
+        .border .close{
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border: 0px solid #009688;
+            text-align: center;
+            padding-top: 5px ;
+
+        }
+        .close:hover{
+            background-color:#ccc ;
+            color: black;
+            cursor: pointer;
+        }
+        h2{
+          text-align: center;
+          color: #fff;
+          padding: 30px;
+        }
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 860px;
+            margin-bottom: 20px;
+        }
+        .form-group input{
+            padding: 10px;
+        }
+        #btn-pay{
+            margin-left: 20px;
+            background-color: #009688;
+            width: 860px;
+            height: 50px;
+            border: none;
+            font-size: 20px;
+            color: #fff;
+        }
+        #btn-pay:hover{
+            background-color:#ccc ;
+            color: black;
+            cursor: pointer;
+        }
+        .heal{
+            float: right;
+            margin-right: 20px;
+            margin-top: 30px;
+        }
+        .heal a{
+          color: rgb(11, 143, 244);
+        }
+        .buy-tickets{
+            margin-left: 50px;
+        }
+        #btn-buy{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            margin-top: 50px;
+        }
+        #btn-buy:hover{
+            background-color:#ccc ;
+            color: black;  
+            cursor: pointer; 
+        }
+       
+        #clear{
+            float: left;
+            margin-left: 20px;
+            margin-top: 25px;
+        }
+        #clear button{
+            background-color: #f44336;
+            color: #fff;
+            padding: 10px;
+            border: none;
+        }
+        #clear button:hover{
+            background-color:#ccc ;
+            color: black;   
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="Tickets">
+        
+       <div class="border">
+        <h2>Tickets</h2>
+        <p class="close">X</p>
+       </div>
+        <form action="">
+            <div class="form-group">
+                <label for="">Tickets,$15 per person</label>
+                <input id="price" type="text" placeholder="How much?">
+                <p class="error"></p>
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input id="email"  type="text" placeholder="Email">
+                <p class="error"></p>
+            </div> 
+        </form>
+        <button id="btn-pay">Pay</button>
+        <div id="clear">
+            <button>Close X</button>
+        </div>
+        <div class="heal">
+            <p>Need <a href="">Heal?</a></p>
+        </div>
+    </div>
+    <div class="buy-tickets">
+        <button id="btn-buy">Buy tikets</button>
+    </div>
+
+    <script>
+        const form_Stickets = document.querySelector('form');
+        const Tickets = document.querySelector('.Tickets');
+        const close = document.querySelector('.close');
+        const btn_buy = document.getElementById('btn-buy');
+        const clear = document.getElementById('clear')
+        const btn_pay = document.getElementById('btn-pay')
+        console.log(clear);
+
+        btn_buy.onclick = function(){
+            Tickets.style.display = 'block';
+        }
+        close.onclick = function(){
+            Tickets.style.display = 'none';
+        };
+        clear.onclick = function(){
+            Tickets.style.display = 'none';
+        };
+
+        let  formField = [
+            ' price','email'
+        ];
+
+        btn_pay.onclick =function(even){
+            even.preventDefault();
+            let element = document.getElementById(formField);
+            if(element.value.trim() == ''){
+
+            }
+            console.log(element);
+        }
+
+
+    </script>
+</body>
+</html>
